@@ -1,6 +1,7 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom'
 
-class App extends Component {
+class Welcome extends Component {
     render() {
         return (
             <section className="welcome">
@@ -9,11 +10,11 @@ class App extends Component {
                     beautiful works of art located in non-traditional spaces throughout the city.
                 </p>
                 <button>
-                    Begin your adventure!
+                    <Link to="/Art">Begin your adventure!</Link>
                 </button>
             </section>
         );
     }
 }
 
-export default App;
+export default Welcome;

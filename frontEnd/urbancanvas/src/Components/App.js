@@ -55,21 +55,15 @@ const Topics = ({ match }) => (
 const App = () => (
   <Router>
     <div className="App">
-      <Header />
-      <ul>
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/Art">Art</Link></li>
-        <li><Link to="/topics">Topics</Link></li>
-      </ul>
-
-      <hr />
-
-      <Route exact path="/" component={Home} />
-      <Route path="/Art" component={Art} />
-      <Route path="/topics" component={Topics} />
+      <Route path="/" component={Header} />
+      <Route exact path="/" component={Welcome} />
+      <Route path="/topics" component={Lib} />
+      {/* <Route path="/Art" component={Art} /> */}
+      {/* <Route path="/topics" component={Topics} /> */}
     </div>
   </Router>
 )
+
 export default App
 
 
