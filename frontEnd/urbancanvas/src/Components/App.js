@@ -6,14 +6,15 @@ import {
 } from 'react-router-dom'
 import Header from './Header'
 import Lib from './Lib';
+import Welcome from './Welcome';
 
 const Home = () => (
   <div>
-    <h2>Home</h2>
+    <Welcome />
   </div>
 )
 
-const About = () => (
+const Art = () => (
   <Lib />
 )
 
@@ -51,24 +52,24 @@ const Topics = ({ match }) => (
   </div>
 )
 
-const BasicExample = () => (
+const App = () => (
   <Router>
-    <div>
+    <div className="App">
       <Header />
       <ul>
         <li><Link to="/">Home</Link></li>
-        <li><Link to="/about">About</Link></li>
+        <li><Link to="/Art">Art</Link></li>
         <li><Link to="/topics">Topics</Link></li>
       </ul>
 
       <hr />
 
       <Route exact path="/" component={Home} />
-      <Route path="/about" component={About} />
+      <Route path="/Art" component={Art} />
       <Route path="/topics" component={Topics} />
     </div>
   </Router>
 )
-export default BasicExample
+export default App
 
 
