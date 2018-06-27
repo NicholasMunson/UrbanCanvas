@@ -59,7 +59,7 @@ const App = () => (
       <Route className="header" path="/" component={Header} />
       <div className="app">
         <Route exact path="/" component={Welcome} />
-        <Route path="/topics" component={Lib} />
+        <Route path="/art" component={Lib} />
       {/* <Route path="/Art" component={Art} /> */}
       {/* <Route path="/topics" component={Topics} /> */}
     </div>
