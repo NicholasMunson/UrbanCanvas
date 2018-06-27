@@ -9,15 +9,16 @@ class Multi extends Component {
         this.state = {}
     }
     render() {
-        let displaySwitch = change(this.props.display)
+				let displaySwitch = change(this.props.display)
+				let artList = (this.props.artList)
         function change(display) {
             switch (display) {
                 case "a":
-                    return <Directions/>
+                    return <Directions  />
                 case "b":
-                    return <Description/>
+                    return <Description description={this.props.artList} />
                 case "c":
-                    return <Form/>
+                    return <Form />
             }
         }
         return (<div className="Multi-card"></div>)

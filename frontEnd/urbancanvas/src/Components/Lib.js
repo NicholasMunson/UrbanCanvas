@@ -13,7 +13,7 @@ class Lib extends Component {
         }
     }
     componentWillMount = () => {
-        let URL = "./dumb.json"
+        let URL = "https://urban-canvas-server.herokuapp.com/api/v1/art-cards"
         fetch(URL)
             .then(res => res.json())
             .then(res => {
@@ -25,7 +25,7 @@ class Lib extends Component {
             <div className="card-lib">
                 <List artList={this.state.artList}/> 
                 {/* <Map id={this.state.id} artList={this.state.artList}/> */}
-                <Multi display={this.state.display}/>
+                <Multi display={this.state.display} artList={this.state.artList}/>
             </div>
         )
     }
