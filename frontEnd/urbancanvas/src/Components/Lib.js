@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 // import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import Card from "./Card";
+import List from "./List";
+
 
 
 
@@ -27,8 +28,9 @@ class Lib extends Component {
   render() {
     return (
     <div className="cardLib">
-      
-      <Card />
+      <List artList={this.state.artList} />
+
+    
 
     </div>);
   }
