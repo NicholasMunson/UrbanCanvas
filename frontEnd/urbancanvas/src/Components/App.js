@@ -19,7 +19,6 @@ const App = () => (
     </React.Fragment>
   </Router>
 )
-
 export default App
 
 
