@@ -1,5 +1,5 @@
 {
-    "editor.tabSize": 2,
+    "editor.tabSize": 1,
     "[yaml]": {
         "editor.insertSpaces": true,
         "editor.tabSize": 1,
