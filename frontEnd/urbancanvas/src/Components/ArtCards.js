@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import "./App.css"
 
 const ArtCards = (props) => {
@@ -9,7 +9,7 @@ const ArtCards = (props) => {
       <p className="card-location">{props.card.description}</p>
       <div className="card-buttons">
         <button className="edit-button" >Edit</button>
-        <button className="delete-button">Delete</button>
+        <button className="delete-button" s>Delete</button>
       </div>
     </div>
   )

@@ -20,7 +20,6 @@ class Lib extends Component {
         })
       })
   }
-
   render() {
     return (
       <div className="card-lib">
