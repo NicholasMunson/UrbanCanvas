@@ -37,11 +37,11 @@
 
 }
 
-.cardImg {
+.card-img {
   width: 80%;
   height: auto;
   padding: 10%;
 }
-.cardLocation{
+.card-location{
   color: white;
 }
