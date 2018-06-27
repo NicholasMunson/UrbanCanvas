@@ -13,6 +13,10 @@ class Lib extends Component {
       artList:[]
     }
   }
+  componentWillMount = () =>{
+    let URL = "./"
+  }
+
   render() {
     return (<div className="App">
     

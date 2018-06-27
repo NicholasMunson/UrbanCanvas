@@ -1,0 +1,19 @@
+[
+    {
+        "id": 1,
+        "imgUrl": "https://vectortoons.com/wp-content/uploads/2016/04/a-graffiti-wall-background.jpg",
+        "location": "5th & Broadway Denver CO",
+        "description": "Peace Love Street Mural"
+    }, {
+        "id": 2,
+        "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdiNNnd4Ql_Rq6K5VcHXYPzgwEFr2wDhpl5Fn3YPwDuB0UdskoeA",
+        "location": "Washington & 26th Denver CO",
+        "description": "Woman with gas mask"
+
+    }, {
+        "id": 3,
+        "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fe/20091007_Graffiti_Shanghai_7373.jpg",
+        "location": "Colfax & Humboldt",
+        "description": "Peace Dude!"
+    }
+]
