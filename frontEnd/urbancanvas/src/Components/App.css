@@ -45,3 +45,9 @@
 .card-location{
   color: white;
 }
+.card-buttons{
+  align-items: center;
+  width: 100%;
+  height: auto;
+
+}
