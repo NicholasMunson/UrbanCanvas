@@ -23,9 +23,11 @@ class Lib extends Component {
     render() {
         return (
             <div className="card-lib">
-                <List artList={this.state.artList}/> 
-                {/* <Map id={this.state.id} artList={this.state.artList}/> */}
-                <Multi display={this.state.display} artList={this.state.artList}/>
+                <List artList={this.state.artList}/> {/* <Map id={this.state.id} artList={this.state.artList}/> */}
+                <Multi
+                    display={this.state.display}
+                    artList={this.state.artList}
+                    id={this.state.id}/>
             </div>
         )
     }
