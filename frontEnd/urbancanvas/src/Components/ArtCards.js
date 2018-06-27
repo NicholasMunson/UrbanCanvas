@@ -1,15 +1,18 @@
 import React from 'react';
 import "./App.css"
 
-const Card = () => {
-    return (
-        <section className="card" >
-            <img className="cardImg" src="https://lh5.ggpht.com/jyCBS54ZBvqCks_Uy7yXzsfXDYoSNg52TpsWG6Ta0ATu7wKr2b8mWuv7YfSg" alt="art" />
-            <p className="cardLocation">
-                Location
-            </p>
-        </section>
-    )
+const ArtCards = (props) => {
+  console.log(props)
+  return (
+    <div className="card" id={props.card.id} key={props.card.id}>
+      <img className="card-img" src={props.card.imgUrl} alt={props.card.id} />
+      <p className="card-location">{props.card.description}</p>
+      <div className="card-buttons">
+        <button className="edit-button" >Edit</button>
+        <button className="delete-button">Delete</button>
+      </div>
+    </div>
+  )
 }
 
-export default Card
+export default ArtCards

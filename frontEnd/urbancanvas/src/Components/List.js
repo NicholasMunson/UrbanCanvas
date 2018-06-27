@@ -3,16 +3,15 @@ import ArtCards from "./ArtCards";
 
 
 
-// const List = (props) => {
-//     const ArtPost = props.artList.map(card => {
-//         return(card)
-//     });
-   
+const List = (props) => {
+  const ArtPost = props.artList.map(card => <ArtCards card={card} key={card.id} />);
 
-//     return (
+  return (
+    <div className="art-list">
+      {ArtPost}
+    </div>
 
-    
-//     )
-// }
+  )
+}
 
-// export default List
+export default List
