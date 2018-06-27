@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import Directions from "./Directions"
 import Description from "./Description"
-import Form from "./Form"
+import CreateForm from "./CreateForm"
 
 class Multi extends Component {
     constructor(props) {
@@ -19,10 +19,11 @@ class Multi extends Component {
                 case "b":
                     return <Description description={this.props.artList} />
                 case "c":
-                    return <Form />
+                    return <CreateForm />
             }
         }
-        return (<div className="Multi-card"></div>)
+
+        return (<div className="Multi-card"><CreateForm /></div>)
     }
 }
 
