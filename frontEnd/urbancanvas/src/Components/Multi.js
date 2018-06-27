@@ -10,8 +10,8 @@ class Multi extends Component {
     }
     render() {
 				let displaySwitch = change(this.props.display)
-				let artList = (this.props.artList)
-				let artId = (this.props.id)
+				let artList = this.props.artList
+				let artId = this.props.id
         function change(display) {
             switch (display) {
                 case "a":
