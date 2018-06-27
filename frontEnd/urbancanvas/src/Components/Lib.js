@@ -14,12 +14,20 @@ class Lib extends Component {
     }
   }
   componentWillMount = () =>{
-    let URL = "./"
+    let URL = "./dumb.json";
+    fetch(URL)
+    .then(res => res.json())
+    .then(res => {
+      this.setState({
+        artList:res
+      })
+    })
   }
 
   render() {
-    return (<div className="App">
-    
+    return (
+    <div className="cardLib">
+      
       <Card />
 
     </div>);
