@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -16,9 +16,31 @@
 
 .App-intro {
   font-size: large;
+} */
+
+
+/* I did not know if we needed the above styling so i left it alone */
+
+.app {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+
+}
+.card {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  width: 60%;
+
 }
 
-.header{
-  display: flex;
-  
+.cardImg {
+  width: 80%;
+  height: auto;
+  padding: 10%;
+}
+.cardLocation{
+  color: white;
 }

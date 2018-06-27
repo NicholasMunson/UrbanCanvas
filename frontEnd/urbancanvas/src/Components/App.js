@@ -7,6 +7,7 @@ import {
 import Header from './Header'
 import Lib from './Lib';
 import Welcome from './Welcome';
+import "./App.css"
 
 const Home = () => (
   <div>
@@ -54,13 +55,15 @@ const Topics = ({ match }) => (
 
 const App = () => (
   <Router>
-    <div className="App">
-      <Route path="/" component={Header} />
-      <Route exact path="/" component={Welcome} />
-      <Route path="/topics" component={Lib} />
+  <React.Fragment>
+      <Route className="header" path="/" component={Header} />
+      <div className="app">
+        <Route exact path="/" component={Welcome} />
+        <Route path="/topics" component={Lib} />
       {/* <Route path="/Art" component={Art} /> */}
       {/* <Route path="/topics" component={Topics} /> */}
     </div>
+    </React.Fragment>
   </Router>
 )
 
