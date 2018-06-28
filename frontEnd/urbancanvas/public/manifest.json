@@ -1,9 +1,9 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Urban Canvas",
+  "name": "Urban Canvas, your guide to Art outside the norm",
   "icons": [
     {
-      "src": "favicon.ico",
+      "src": "http://www.freepngimg.com/download/graffiti/31882-9-graffiti-picture.png",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     }
