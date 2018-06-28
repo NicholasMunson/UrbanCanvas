@@ -19,6 +19,7 @@ class App extends React.Component {
           id: null,
       }
       this.handleCreateArtCard = this.handleCreateArtCard.bind(this)
+      this.handleArtDelete = this.handleArtDelete.bind(this)
   }
 
   componentDidMount = () => {
@@ -53,6 +54,31 @@ class App extends React.Component {
     })
   }
 
+  handleArtDelete(event, id){
+    let deleteUrl = `${URL}/${id}`
+    let currentArtList = this.state.artList
+    let currentArt = this.state.artList.filter(art => art.id == id)
+
+    
+
+    event.preventDefault()
+    fetch(deleteUrl, {
+      method:"DELETE",
+      headers:{"Content-Type": "application/json"}
+      
+    })
+    .then(res => res.json())
+    .then(res => {
+      currentArtList.splice(currentArtList.indexOf(currentArt), 1)
+      this.setState({
+        artList: currentArtList
+      })
+    })
+
+
+
+  }
+
   render() {
     return (
       <Router>
@@ -60,7 +86,7 @@ class App extends React.Component {
           <Route className="header" path="/" component={Header} />
           <div className="app">
             <Route exact path="/" component={Welcome} />
-            <Route path="/art" component={() => <Lib display={this.state.display} artList={this.state.artList} id={this.state.id} handleCreateArtCard={this.handleCreateArtCard}/>} />
+            <Route path="/art" component={() => <Lib display={this.state.display} artList={this.state.artList} id={this.state.id} handleCreateArtCard={this.handleCreateArtCard} handleArtDelete={this.handleArtDelete} />}  />
           </div>
         </React.Fragment>
       </Router>
