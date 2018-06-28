@@ -5,7 +5,7 @@ class CreateForm extends Component {
     return (
       <div className='create-form-container'>
         <div>Create Art Card</div>
-        <form className='create-form' onSubmit={this.props.handlePost}>
+        <form className='create-form' onSubmit={this.props.handleCreateArtCard}>
           <div className='input-wrapper'>
             <label htmlFor='imgUrl'>Image Url</label>
             <input name='imgUrl' type='text' required></input>

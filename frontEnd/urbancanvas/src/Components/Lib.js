@@ -10,6 +10,7 @@ class Lib extends Component {
                 <List artList={this.props.artList} />
                 <Map id={this.props.id} artList={this.props.artList} />
                 <Multi
+                    handleCreateArtCard={this.props.handleCreateArtCard}
                     display={this.props.display}
                     artList={this.props.artList}
                     id={this.props.id} />
