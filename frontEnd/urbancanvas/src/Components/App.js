@@ -57,15 +57,15 @@ class App extends React.Component {
   handleArtDelete(event, id){
     let deleteUrl = `${URL}/${id}`
     let currentArtList = this.state.artList
-    let currentArt = this.state.artList.filter(art => art.id == id)
+    let currentArt = this.state.artList.filter(art => art.id == id)[0]
 
-    
+
 
     event.preventDefault()
     fetch(deleteUrl, {
       method:"DELETE",
       headers:{"Content-Type": "application/json"}
-      
+
     })
     .then(res => res.json())
     .then(res => {
