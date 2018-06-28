@@ -12,16 +12,15 @@ const URL = "https://urban-canvas-server.herokuapp.com/api/v1/art-cards"
 
 class App extends React.Component {
   constructor(props) {
-      super(props)
-      this.state = {
-          display: "a",
-          artList: [],
-          id: null,
-          currentArt: null
-      }
-      this.handleClick = this.handleClick.bind(this)
-      this.handleCreateArtCard = this.handleCreateArtCard.bind(this)
-      this.handleArtDelete = this.handleArtDelete.bind(this)
+    super(props)
+    this.state = {
+      display: "a",
+      artList: [],
+      currentArt: null
+    }
+    this.handleClick = this.handleClick.bind(this)
+    this.handleCreateArtCard = this.handleCreateArtCard.bind(this)
+    this.handleArtDelete = this.handleArtDelete.bind(this)
   }
 
   componentDidMount = () => {
@@ -53,36 +52,36 @@ class App extends React.Component {
         description: data.get('description'),
         location: data.get('location')
       }),
-      headers: {'Content-Type': 'application/json'}
+      headers: { 'Content-Type': 'application/json' }
     })
-    .then(res => res.json())
-    .then(res => {
-      let currentArtList = this.state.artList
-      currentArtList.unshift(res)
-      this.setState({
-        artList: currentArtList
+      .then(res => res.json())
+      .then(res => {
+        let currentArtList = this.state.artList
+        currentArtList.unshift(res)
+        this.setState({
+          artList: currentArtList
+        })
       })
-    })
   }
 
-  handleArtDelete(event, id){
+  handleArtDelete(event, id) {
     let deleteUrl = `${URL}/${id}`
     let currentArtList = this.state.artList
     let currentArt = this.state.artList.filter(art => art.id == id)[0]
 
     event.preventDefault()
     fetch(deleteUrl, {
-      method:"DELETE",
-      headers:{"Content-Type": "application/json"}
+      method: "DELETE",
+      headers: { "Content-Type": "application/json" }
     })
-    .then(res => res.json())
-    .then(res => {
-      currentArtList.splice(currentArtList.indexOf(currentArt), 1)
-      this.setState({
-        artList: currentArtList,
-        currentArt: {}
+      .then(res => res.json())
+      .then(res => {
+        currentArtList.splice(currentArtList.indexOf(currentArt), 1)
+        this.setState({
+          artList: currentArtList,
+          currentArt: {}
+        })
       })
-    })
   }
 
   render() {
@@ -92,7 +91,7 @@ class App extends React.Component {
           <Route className="header" path="/" component={Header} />
           <div className="app">
             <Route exact path="/" component={Welcome} />
-            <Route path="/art" component={() => <Lib display={this.state.display} artList={this.state.artList} id={this.state.id} handleCreateArtCard={this.handleCreateArtCard} handleArtDelete={this.handleArtDelete} handleClick={this.handleClick}/>}  />
+            <Route path="/art" component={() => <Lib display={this.state.display} artList={this.state.artList} currentArt={this.state.currentArt} handleCreateArtCard={this.handleCreateArtCard} handleArtDelete={this.handleArtDelete} handleClick={this.handleClick} />} />
           </div>
         </React.Fragment>
       </Router>

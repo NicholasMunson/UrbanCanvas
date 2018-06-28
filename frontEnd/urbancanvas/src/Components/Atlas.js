@@ -29,7 +29,7 @@ const Atlas = compose(
       onClick={props.onToggleOpen}
     >
       {props.isOpen && <InfoWindow onCloseClick={props.onToggleOpen}>
-        <div>Denver Art Museum</div>
+        <div>{props.markerMessage}</div>
       </InfoWindow>}
     </Marker>
   </GoogleMap>
