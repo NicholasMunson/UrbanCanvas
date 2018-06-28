@@ -17,17 +17,28 @@ class App extends React.Component {
           display: "a",
           artList: [],
           id: null,
+          currentArt: null
       }
+      this.handleClick = this.handleClick.bind(this)
       this.handleCreateArtCard = this.handleCreateArtCard.bind(this)
       this.handleArtDelete = this.handleArtDelete.bind(this)
   }
 
   componentDidMount = () => {
-      fetch(URL)
-          .then(res => res.json())
-          .then(res => {
-              this.setState({ artList: res })
-          })
+    fetch(URL)
+      .then(res => res.json())
+      .then(res => {
+        this.setState({
+          artList: res
+        })
+      })
+  }
+
+  handleClick(event, id) {
+    let currentArt = this.state.artList.filter(art => art.id == id)[0]
+    this.setState({
+      currentArt: currentArt
+    })
   }
 
   handleCreateArtCard(event) {
@@ -59,24 +70,19 @@ class App extends React.Component {
     let currentArtList = this.state.artList
     let currentArt = this.state.artList.filter(art => art.id == id)[0]
 
-
-
     event.preventDefault()
     fetch(deleteUrl, {
       method:"DELETE",
       headers:{"Content-Type": "application/json"}
-
     })
     .then(res => res.json())
     .then(res => {
       currentArtList.splice(currentArtList.indexOf(currentArt), 1)
       this.setState({
-        artList: currentArtList
+        artList: currentArtList,
+        currentArt: {}
       })
     })
-
-
-
   }
 
   render() {
@@ -86,7 +92,7 @@ class App extends React.Component {
           <Route className="header" path="/" component={Header} />
           <div className="app">
             <Route exact path="/" component={Welcome} />
-            <Route path="/art" component={() => <Lib display={this.state.display} artList={this.state.artList} id={this.state.id} handleCreateArtCard={this.handleCreateArtCard} handleArtDelete={this.handleArtDelete} />}  />
+            <Route path="/art" component={() => <Lib display={this.state.display} artList={this.state.artList} id={this.state.id} handleCreateArtCard={this.handleCreateArtCard} handleArtDelete={this.handleArtDelete} handleClick={this.handleClick}/>}  />
           </div>
         </React.Fragment>
       </Router>

@@ -12,7 +12,7 @@ class CreateForm extends Component {
             <label htmlFor='description'>Description</label>
             <textarea name='description' type='text' required></textarea>
             <label htmlFor='location'>Location</label>
-            <input name='location' type='text' required></input>
+            <input placeholder='Location in Lat and Lng only!!' name='location' type='text' required></input>
             <input type='submit' value='Create'></input>
           </div>
         </form>
