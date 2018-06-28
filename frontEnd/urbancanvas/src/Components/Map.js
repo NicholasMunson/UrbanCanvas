@@ -4,10 +4,16 @@ require("dotenv").config()
 
 class Map extends Component {
   render() {
+    const clicked = this.props.currentArt
+    const message = clicked ? clicked.description : "Denver Art Museum"
+    let mapLocation = clicked ? clicked.location : { lat: 39.7371342, lng: -104.9894632 }
+
     return (
       <div className="map-container">
         <h3>Maps</h3>
         <Atlas
+          markerMessage={message}
+          locale={mapLocation}
           isMarkerShown
           googleMapURL={process.env.REACT_APP_MAP_KEY}
           loadingElement={<div style={{ height: `100%` }} />}

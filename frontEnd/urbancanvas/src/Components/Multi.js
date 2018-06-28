@@ -23,7 +23,7 @@ class Multi extends Component {
             }
         }
 
-        return (<div className="Multi-card"><CreateForm /></div>)
+        return (<div className="Multi-card"><CreateForm handleCreateArtCard={this.props.handleCreateArtCard}/></div>)
     }
 }
 
