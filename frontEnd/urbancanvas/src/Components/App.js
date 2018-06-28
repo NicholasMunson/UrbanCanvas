@@ -79,7 +79,7 @@ class App extends React.Component {
         currentArtList.splice(currentArtList.indexOf(currentArt), 1)
         this.setState({
           artList: currentArtList,
-          currentArt: {}
+          currentArt: null
         })
       })
   }
