@@ -50,7 +50,9 @@ class App extends React.Component {
       body: JSON.stringify({
         imgUrl: data.get('imgUrl'),
         description: data.get('description'),
-        location: data.get('location')
+        location: data.get('location'),
+        lat: parseFloat(data.get('lat')),
+        lng: parseFloat(data.get('lng'))
       }),
       headers: { 'Content-Type': 'application/json' }
     })
