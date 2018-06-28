@@ -7,7 +7,7 @@ class Lib extends Component {
     render() {
         return (
             <div className="card-lib">
-                <List artList={this.props.artList} />
+                <List artList={this.props.artList} handleArtDelete={this.props.handleArtDelete}/>
                 <Map id={this.props.id} artList={this.props.artList} />
                 <Multi
                     handleCreateArtCard={this.props.handleCreateArtCard}

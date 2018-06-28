@@ -9,7 +9,7 @@ const ArtCards = (props) => {
 			<p className="card-location">{props.card.description}</p>
 			<div className="card-buttons">
 				<button className="edit-button">Edit</button>
-				<button className="delete-button" s="s">Delete</button>
+				<button onClick={this.props.handleArtDelete} className="delete-button" s="s">Delete</button>
 			</div>
 		</div>
 	)
