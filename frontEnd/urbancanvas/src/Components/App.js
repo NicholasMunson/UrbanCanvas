@@ -18,6 +18,7 @@ class App extends React.Component {
           artList: [],
           id: null,
       }
+      this.handleCreateArtCard = this.handleCreateArtCard.bind(this)
   }
 
   componentWillMount = () => {
@@ -33,18 +34,22 @@ class App extends React.Component {
 
     const data = new FormData(event.target)
 
-    console.log(data.get('imgUrl'))
-
     fetch(URL, {
       method: "POST",
       body: JSON.stringify({
         imgUrl: data.get('imgUrl'),
         description: data.get('description'),
         location: data.get('location')
+      }),
+      headers: {'Content-Type': 'application/json'}
+    })
+    .then(res => res.json())
+    .then(res => {
+      let currentArtList = this.state.artList
+      currentArtList.unshift(res)
+      this.setState({
+        artList: currentArtList
       })
-    }).then(res => {
-      console.log(JSON.stringify(res))
-      return res
     })
   }
 
