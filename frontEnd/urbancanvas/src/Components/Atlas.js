@@ -6,53 +6,32 @@ import {
   Marker,
   InfoWindow
 } from "react-google-maps";
+const { compose, withStateHandlers } = require("recompose");
 
+const Atlas = compose(
+  withStateHandlers(() => ({
+    isOpen: false,
+  }), {
+      onToggleOpen: ({ isOpen }) => () => ({
+        isOpen: !isOpen,
+      })
+    }),
+  withScriptjs,
+  withGoogleMap
+)(props =>
 
-const Atlas = withScriptjs(withGoogleMap(props =>
   <GoogleMap
-    defaultZoom={10}
-    defaultCenter={{ lat: 39.7576749, lng: -105.006952 }}
+    defaultZoom={14}
+    defaultCenter={props.locale}
   >
-    {props.isMarkerShown && <Marker position={{ lat: 39.7576749, lng: -105.006952 }} />}
+    <Marker
+      position={props.locale}
+      onClick={props.onToggleOpen}
+    >
+      {props.isOpen && <InfoWindow onCloseClick={props.onToggleOpen}>
+        <div>Denver Art Museum</div>
+      </InfoWindow>}
+    </Marker>
   </GoogleMap>
-));
-
-
-// const Atlas = withScriptjs(withGoogleMap(
-//   withStateHandlers(() => ({
-//     isOpen: false,
-//   }), {
-//       onToggleOpen: ({ isOpen }) => () => ({
-//         isOpen: !isOpen,
-//       })
-//     }),
-//   withScriptjs,
-//   withGoogleMap
-// )(props =>
-//   <GoogleMap
-//     defaultZoom={8}
-//     defaultCenter={{ lat: -34.397, lng: 150.644 }}
-//   >
-//     <Marker
-//       position={{ lat: -34.397, lng: 150.644 }}
-//       onClick={props.onToggleOpen}
-//     >
-//       {props.isOpen && <InfoWindow onCloseClick={props.onToggleOpen}>
-//         <FaAnchor />
-//       </InfoWindow>}
-//     </Marker>
-//   </GoogleMap>
-// )
-
-
-
-
-
-
-
-
-
-
-
+);
 export default Atlas;
-
