@@ -21,7 +21,7 @@ class App extends React.Component {
       this.handleCreateArtCard = this.handleCreateArtCard.bind(this)
   }
 
-  componentWillMount = () => {
+  componentDidMount = () => {
       fetch(URL)
           .then(res => res.json())
           .then(res => {
