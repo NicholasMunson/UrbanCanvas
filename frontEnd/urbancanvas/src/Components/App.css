@@ -1,53 +1,119 @@
-/* .App {
-  text-align: center;
-}
-
 .App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+    background-image: url("../images/graffiti-wall-1.jpg"); 
+    height: 150px;
+    padding: 20px;
+    color: black;
 }
 
 .App-title {
-  font-family: 'Next Custom';
-  font-size: 3.5em;
+    font-family: 'Most Wazted';
+    display: flex;
+    justify-content: center;
+    margin-top: 0.1%;
+    font-size: 145px;
+    text-shadow: 0 0 0.3em #aa0c0c, 0 0 0.3em #aa0c0c;
 }
 
-.App-intro {
-  font-size: large;
-} */
+.nav {
+    background-color: dimgray;
+    height: 15px;
+    padding: 25px;
+    color: white;
+}
 
+.navbut1 {
+    flex-direction: row;
+    justify-content: center;
+    width: 10%;
+    height: 2rem;
+    margin-left: 40%;
+}
 
-/* I did not know if we needed the above styling so i left it alone */
+.home {
+    text-decoration: none;
+    font-size: 15px;
+    color: black;
+}
 
+.art {
+    text-decoration: none;
+    font-size: 15px;
+    color: black;
+}
+
+.navbut2 {
+    flex-direction: row;
+    justify-content: center;
+    width: 10%;
+    height: 2rem;
+}
+
+.background-img {
+    background: linear-gradient(rgba(158, 17, 17, 0.2), rgba(158, 17, 17, 0.2)), url("../images/girlspray.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+}
+
+.welcome {
+    width: 44%;
+    height: 25rem;
+    font-size: 24px;
+    margin: 0 auto;
+    color: white;
+    padding: 15%;
+}
+
+.enter {
+    display: flex;
+    justify-content: center;
+    width: 40%;
+    height: 5rem;
+    font-size: 20px;
+    background-color: dimgray;
+    color: white;
+    margin: 0 auto;
+}
+
+.goto {
+    color: white;
+    text-decoration: none;
+}
+
+.subtitle {
+
+    display: flex;
+    justify-content: center;
+}
 
 .app {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-
+    align-items: center;
+    display: flex;
+    flex-direction: column;
 }
-.card {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  background-color: black;
-  width: 60%;
 
+.card {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    width: 60%;
 }
 
 .card-img {
-  width: 80%;
-  height: auto;
-  padding: 10%;
+    width: 80%;
+    height: auto;
+    padding: 10%;
 }
-.card-location{
-  color: white;
+
+.card-location {
+    color: white;
 }
-.card-buttons{
-  align-items: center;
-  width: 100%;
-  height: auto;
+
+.card-buttons {
+    align-items: center;
+    width: 100%;
+    height: auto;
 
 }
