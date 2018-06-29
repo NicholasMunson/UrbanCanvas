@@ -36,7 +36,7 @@ class Multi extends Component {
 
         return (
         <div className="multi-card">
-            <button className="add-button button-style" >Add New Discovery</button>
+            <button onClick= {() => this.props.updateDisplay("c")} className="add-button button-style add" >Add New Discovery</button>
             {displaySwitch}
         </div>)
     }

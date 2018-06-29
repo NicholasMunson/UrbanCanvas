@@ -18,7 +18,8 @@ class Lib extends Component {
                 <section className="map-container-lib">
                     <Map currentArt={this.props.currentArt}/>
                     <Multi
-						            className="multi-changing-component"
+						updateDisplay={this.props.updateDisplay}
+                        className="multi-changing-component"
                         handleCreateArtCard={this.props.handleCreateArtCard}
                         handleUpdateArtCard={this.props.handleUpdateArtCard}
                         display={this.props.display}

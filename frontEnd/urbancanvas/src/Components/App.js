@@ -21,6 +21,7 @@ class App extends React.Component {
     this.handleUpdateArtCard = this.handleUpdateArtCard.bind(this)
     this.handleArtDelete = this.handleArtDelete.bind(this)
     this.updateDisplay = this.updateDisplay.bind(this)
+    this.addNewArt = this.addNewArt.bind(this)
   }
 
   componentDidMount = () => {
@@ -94,6 +95,12 @@ class App extends React.Component {
       })
   }
 
+  addNewArt(event, c){
+    this.setState({
+      display: c
+    })
+  }
+
   handleUpdateArtCard(event, updateForm, id) {
     event.preventDefault()
 
@@ -131,7 +138,7 @@ class App extends React.Component {
           <Route className="header" path="/" component={Header} />
           <div className="app">
             <Route exact path="/" component={Welcome} />
-            <Route path="/art" component={() => <Lib display={this.state.display} artList={this.state.artList} currentArt={this.state.currentArt} handleCreateArtCard={this.handleCreateArtCard} handleArtDelete={this.handleArtDelete} handleClick={this.handleClick} handleUpdateArtCard={this.handleUpdateArtCard} updateDisplay={this.updateDisplay}/>} />
+            <Route path="/art" component={() => <Lib display={this.state.display} artList={this.state.artList} currentArt={this.state.currentArt} handleCreateArtCard={this.handleCreateArtCard} handleArtDelete={this.handleArtDelete} handleClick={this.handleClick} handleUpdateArtCard={this.handleUpdateArtCard} updateDisplay={this.updateDisplay} addNewArt={this.addNewArt} />} />
           </div>
         <Footer />
         </React.Fragment>
