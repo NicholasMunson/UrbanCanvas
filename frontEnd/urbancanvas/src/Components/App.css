@@ -29,40 +29,31 @@
     }
   }
 
+.button-container {
+    display: flex;
+    justify-content: center;
+  }
+
 .nav {
     background-color: dimgray;
     height: 15px;
     padding: 25px;
     color: white;
+    align-content: center;
 }
 
-.navbut1 {
+.navbut {
     flex-direction: row;
     justify-content: center;
     width: 10%;
     height: 2rem;
-    margin-left: 40%;
 }
 
-.home {
+.button-style {
     text-decoration: none;
     font-size: 15px;
     text-shadow: 0 0 0.1em #070101, 0 0 0.1em #070101;
     color: red;
-}
-
-.art {
-    text-decoration: none;
-    font-size: 15px;
-    text-shadow: 0 0 0.1em #070101, 0 0 0.1em #070101;
-    color: red;
-}
-
-.navbut2 {
-    flex-direction: row;
-    justify-content: center;
-    width: 10%;
-    height: 2rem;
 }
 
 .background-img {

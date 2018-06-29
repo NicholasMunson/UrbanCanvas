@@ -9,13 +9,15 @@ const Header = (props) => {
                     Urban Canvas
                 </h1>
             </header>
-            <div className="nav">
-                <button className="navbut1">
-                    <Link className="home" to="/">HOME</Link>
+            <div className="nav"> 
+            <div className="button-container">
+                <button className="navbut">
+                    <Link className="button-style" to="/">HOME</Link>
                 </button>
-                <button className="navbut2">
-                    <Link className="art" to="/Art">ART</Link>
+                <button className="navbut">
+                    <Link className="button-style" to="/Art">ART</Link>
                 </button>
+            </div>
             </div>
         </React.Fragment>
     )
