@@ -4,3 +4,12 @@ height: auto;
 display: flex;
 flex-direction: row;
 }
+
+.map-container{
+  width: 60%;
+}
+
+.card-lib{
+  width: 100%
+}
+
