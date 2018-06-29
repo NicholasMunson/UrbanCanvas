@@ -11,7 +11,7 @@ class Map extends Component {
 
     return (
       <div className="map-container">
-        <h3>where to find this dope art</h3>
+        <h3>Where to find this dope art.</h3>
         <Atlas
           markerMessage={message}
           locale={mapLocation}
