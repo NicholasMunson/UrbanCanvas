@@ -39,7 +39,7 @@ class CreateForm extends Component {
 					<div className='input-wrapper'>
 
 						<label htmlFor='location'>Location</label>
-						<input name='location' type='text' value={this.state.location} onChange={this.state.handelChange} required></input>
+						<input name='location' type='text' value={this.state.location} readOnly required></input>
 
 						<label htmlFor='lat'>Latitude</label>
 						<input name='lat' type='number' min='-90' max='90' value={this.state.lat} readOnly required></input>
