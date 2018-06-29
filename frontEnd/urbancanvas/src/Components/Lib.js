@@ -11,6 +11,7 @@ class Lib extends Component {
                 <section className="card-lib">
                     <List
                         handleClick={this.props.handleClick}
+                        updateDisplay={this.props.updateDisplay}
                         artList={this.props.artList}
                         handleArtDelete={this.props.handleArtDelete}/>
                 </section>

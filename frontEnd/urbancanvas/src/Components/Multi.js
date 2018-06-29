@@ -19,7 +19,7 @@ class Multi extends Component {
       case "a":
         return <Directions />
       case "b":
-        return <Description description={this.props.artList} />
+        return <Description currentArt={this.props.currentArt} />
       case "c":
         return <CreateForm handleCreateArtCard={this.props.handleCreateArtCard} />
       case "d":

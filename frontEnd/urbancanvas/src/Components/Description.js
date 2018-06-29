@@ -1,11 +1,9 @@
 import React from 'react'
 
-const Directions = (props) => {
-  let artDescription = (this.props.description)
+const Description = (props) => {
     return (
-    <p>{artDescription}</p>  
+      <p>{props.currentArt.description}</p>
     )
-
 }
 
-export default Directions
+export default Description
