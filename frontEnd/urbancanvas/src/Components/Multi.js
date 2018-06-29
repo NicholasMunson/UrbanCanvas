@@ -8,24 +8,30 @@ import "../Components/Multi.css"
 class Multi extends Component {
   constructor(props) {
     super(props)
-    this.state = {}
+    this.state = {
+
+    }
+    this.change = this.change.bind(this)
   }
+
+  change(display) {
+    switch (display) {
+      case "a":
+        return <Directions />
+      case "b":
+        return <Description description={this.props.artList} />
+      case "c":
+        return <CreateForm handleCreateArtCard={this.props.handleCreateArtCard} />
+      case "d":
+        return <UpdateForm currentArt={this.props.currentArt} handleUpdateArtCard={this.props.handleUpdateArtCard} />
+    }
+  }
+
   render() {
-    let displaySwitch = change(this.props.display)
+    let displaySwitch = this.change(this.props.display)
     let artList = this.props.artList
     let artId = this.props.id
-    function change(display) {
-      switch (display) {
-        case "a":
-          return <Directions />
-        case "b":
-          return <Description description={this.props.artList} />
-        case "c":
-          return <CreateForm handleCreateArtCard={this.props.handleCreateArtCard} />
-        case "d":
-          return <UpdateForm currentArt={this.props.currentArt} handleUpdateArtCard={this.props.handleUpdateArtCard} />
-      }
-    }
+
 
     return (
       <div className="multi-card">

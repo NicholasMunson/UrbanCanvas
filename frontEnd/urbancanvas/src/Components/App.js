@@ -12,7 +12,7 @@ class App extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      display: "a",
+      display: "d",
       artList: [],
       currentArt: {}
     }
@@ -35,6 +35,7 @@ class App extends React.Component {
   handleClick(event, id) {
     let currentArt = this.state.artList.filter(art => art.id == id)[0]
     this.setState({
+      // display: 'a',
       currentArt: currentArt
     })
   }
@@ -106,8 +107,11 @@ class App extends React.Component {
     .then(res => res.json())
     .then(res => {
       let currentArtList = this.state.artList
+      let artToBeUpdated = currentArtList.filter(art => art.id == res.id)
+      currentArtList.splice(currentArtList.indexOf(res), 1)
       currentArtList.unshift(res)
       this.setState({
+        currentArt: res,
         artList: currentArtList
       })
     })
