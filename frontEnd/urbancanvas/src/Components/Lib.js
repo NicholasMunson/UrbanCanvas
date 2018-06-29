@@ -8,17 +8,20 @@ class Lib extends Component {
     render() {
         return (
             <div className="page-2-container">
-                <div className="card-lib">
+                <section className="card-lib">
                     <List
                         handleClick={this.props.handleClick}
                         artList={this.props.artList}
                         handleArtDelete={this.props.handleArtDelete}/>
+                </section>
+                <section className="map-container-lib">
                     <Map currentArt={this.props.currentArt}/>
                     <Multi
+						className="multi-changing-component"
                         handleCreateArtCard={this.props.handleCreateArtCard}
                         display={this.props.display}
                         currentArt={this.props.currentArt}/>
-                </div>
+                </section>
             </div>
         )
     }
