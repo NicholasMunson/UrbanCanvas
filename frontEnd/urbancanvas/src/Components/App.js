@@ -18,6 +18,7 @@ class App extends React.Component {
     }
     this.handleClick = this.handleClick.bind(this)
     this.handleCreateArtCard = this.handleCreateArtCard.bind(this)
+    this.handleUpdateArtCard = this.handleUpdateArtCard.bind(this)
     this.handleArtDelete = this.handleArtDelete.bind(this)
   }
 
@@ -101,6 +102,14 @@ class App extends React.Component {
         lng: parseFloat(data.get('lng'))
       }),
       headers: {"Content-Type": "application/json"}
+    })
+    .then(res => res.json())
+    .then(res => {
+      let currentArtList = this.state.artList
+      currentArtList.unshift(res)
+      this.setState({
+        artList: currentArtList
+      })
     })
   }
 
