@@ -11,12 +11,13 @@
     color: #281818;
 }
 
+
 .App-title {
     font-family: 'Sedgwick Ave Display', cursive;
     display: flex;
     justify-content: center;
     margin-top: 0.1%;
-    font-size: 145px;
+    font-size: 16vmin;
     text-shadow: 0 0 0.3em #aa0c0c, 0 0 0.3em #aa0c0c;
 }
 .App-title {
