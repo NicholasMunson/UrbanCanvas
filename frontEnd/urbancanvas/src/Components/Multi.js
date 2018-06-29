@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 import Directions from "./Directions"
 import Description from "./Description"
 import CreateForm from "./CreateForm"
@@ -11,13 +11,13 @@ class Multi extends Component {
         this.state = {}
     }
     render() {
-				let displaySwitch = change(this.props.display)
-				let artList = this.props.artList
-				let artId = this.props.id
+        let displaySwitch = change(this.props.display)
+        let artList = this.props.artList
+        let artId = this.props.id
         function change(display) {
             switch (display) {
                 case "a":
-                    return <Directions  />
+                    return <Directions />
                 case "b":
                     return <Description description={this.props.artList} />
                 case "c":
@@ -26,10 +26,10 @@ class Multi extends Component {
         }
 
         return (
-          <div className="Multi-card">
-            <CreateForm handleCreateArtCard={this.props.handleCreateArtCard} />
-            <UpdateForm currentArt={this.props.currentArt} handleUpdateArtCard={this.props.handleUpdateArtCard} />
-          </div>)
+            <div className="multi-card">
+                <CreateForm handleCreateArtCard={this.props.handleCreateArtCard} />
+                <UpdateForm currentArt={this.props.currentArt} handleUpdateArtCard={this.props.handleUpdateArtCard} />
+            </div>)
     }
 }
 
