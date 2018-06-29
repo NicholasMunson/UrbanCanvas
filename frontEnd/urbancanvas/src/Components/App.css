@@ -14,25 +14,25 @@
     text-shadow: 0 0 0.3em #aa0c0c, 0 0 0.3em #aa0c0c;
 }
 .App-title {
-  animation-duration: 3s;
-  animation-name: slidein;
-  }
+    animation-duration: 3s;
+    animation-name: slidein;
+}
 
-  @keyframes slidein {
+@keyframes slidein {
     from {
-      margin-left: 100%;
-      width: 300%;
+        margin-left: 100%;
+        width: 300%;
     }
     to {
-      margin-left: 0%;
-      width: 100%;
+        margin-left: 0;
+        width: 100%;
     }
-  }
+}
 
 .button-container {
     display: flex;
     justify-content: center;
-  }
+}
 
 .nav {
     background-color: dimgray;
@@ -51,7 +51,7 @@
 
 .button-style {
     text-decoration: none;
-    font-size: 15px;
+    font-size: 1vw;
     text-shadow: 0 0 0.1em #070101, 0 0 0.1em #070101;
     color: red;
 }
@@ -108,7 +108,7 @@
     display: flex;
     flex-direction: column;
     background-color: black;
-    width: 90%;
+    width: 100%;
 }
 
 .card-img {
