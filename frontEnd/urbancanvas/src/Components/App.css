@@ -139,6 +139,8 @@
 .input-wrapper {
   display: flex;
   flex-direction: column;
+  height: auto;
+  width: 50%;
 }
 
 footer {
