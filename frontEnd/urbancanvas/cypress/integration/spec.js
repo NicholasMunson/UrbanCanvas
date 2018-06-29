@@ -27,5 +27,5 @@ describe('End to end tests!!', () => {
   xit('it can delete art card', () => {
     cy.get('.card')
   })
-  
+
 })
