@@ -21,18 +21,15 @@ const SearchBox = compose(
         },
         onPlacesChanged: () => {
           const places = refs.searchBox.getPlaces();
-
-          this.setState({
-            // props.places.map(({ place_id, formatted_address, geometry: { location } }) =>
-            //   <li key={place_id}>
-            //     {formatted_address}
-            //     {" at "}
-            //     ({location.lat()}, {location.lng()})
-            //  </li>
-            // )
-
-            places,
-          });
+          let theLocation = places[0].formatted_address
+          let theLat = places[0].geometry.location.lat()
+          let theLng = places[0].geometry.location.lng()
+          this.props.addressUpdate({
+            location: theLocation,
+            lat: theLat,
+            lng: theLng
+          })
+          places
         },
       })
     },
