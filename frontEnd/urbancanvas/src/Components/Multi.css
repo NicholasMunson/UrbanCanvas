@@ -8,7 +8,8 @@ margin-bottom: 1.3%;
 }
 
 .map-container{
-  width: 50%;
+  width: 100%;
+  height: auto;
 }
 
 .card-lib{
@@ -20,11 +21,13 @@ margin-bottom: 1.3%;
 }
 .map-container-lib{
   align-content: center;
-  width: 67.4%;
+  width: 50%;
   height: auto;
   display: flex;
   flex-direction: column;
-  position: fixed;
+  /* position: fixed; */
   left: 58%;
+  top: 36%;
+  overflow: scroll;
   /* align-items: center; */
 }
