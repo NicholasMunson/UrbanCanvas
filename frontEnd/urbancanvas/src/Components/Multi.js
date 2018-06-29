@@ -6,31 +6,32 @@ import UpdateForm from "./UpdateForm"
 import "../Components/Multi.css"
 
 class Multi extends Component {
-    constructor(props) {
-        super(props)
-        this.state = {}
+  constructor(props) {
+    super(props)
+    this.state = {}
+  }
+  render() {
+    let displaySwitch = change(this.props.display)
+    let artList = this.props.artList
+    let artId = this.props.id
+    function change(display) {
+      switch (display) {
+        case "a":
+          return <Directions />
+        case "b":
+          return <Description description={this.props.artList} />
+        case "c":
+          return <CreateForm handleCreateArtCard={this.props.handleCreateArtCard} />
+        case "d":
+          return <UpdateForm currentArt={this.props.currentArt} handleUpdateArtCard={this.props.handleUpdateArtCard} />
+      }
     }
-    render() {
-        let displaySwitch = change(this.props.display)
-        let artList = this.props.artList
-        let artId = this.props.id
-        function change(display) {
-            switch (display) {
-                case "a":
-                    return <Directions />
-                case "b":
-                    return <Description description={this.props.artList} />
-                case "c":
-                    return <CreateForm />
-            }
-        }
 
-        return (
-            <div className="multi-card">
-                <CreateForm handleCreateArtCard={this.props.handleCreateArtCard} />
-                <UpdateForm currentArt={this.props.currentArt} handleUpdateArtCard={this.props.handleUpdateArtCard} />
-            </div>)
-    }
+    return (
+      <div className="multi-card">
+        {displaySwitch}
+      </div>)
+  }
 }
 
 export default Multi
