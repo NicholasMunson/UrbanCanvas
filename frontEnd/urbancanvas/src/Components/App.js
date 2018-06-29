@@ -14,7 +14,7 @@ class App extends React.Component {
     this.state = {
       display: "a",
       artList: [],
-      currentArt: null
+      currentArt: {}
     }
     this.handleClick = this.handleClick.bind(this)
     this.handleCreateArtCard = this.handleCreateArtCard.bind(this)
@@ -65,11 +65,12 @@ class App extends React.Component {
   }
 
   handleArtDelete(event, id) {
+    event.preventDefault()
+
     let deleteUrl = `${URL}/${id}`
     let currentArtList = this.state.artList
     let currentArt = this.state.artList.filter(art => art.id == id)[0]
 
-    event.preventDefault()
     fetch(deleteUrl, {
       method: "DELETE",
       headers: { "Content-Type": "application/json" }
@@ -84,6 +85,25 @@ class App extends React.Component {
       })
   }
 
+  handleUpdateArtCard(event, updateForm, id) {
+    event.preventDefault()
+
+    let updateUrl = `${URL}/${id}`
+    const data = new FormData(event.target)
+
+    fetch(updateUrl, {
+      method: 'PUT',
+      body: JSON.stringify({
+        imgUrl: data.get('imgUrl'),
+        description: data.get('description'),
+        location: data.get('location'),
+        lat: parseFloat(data.get('lat')),
+        lng: parseFloat(data.get('lng'))
+      }),
+      headers: {"Content-Type": "application/json"}
+    })
+  }
+
   render() {
     return (
       <Router>
@@ -91,7 +111,7 @@ class App extends React.Component {
           <Route className="header" path="/" component={Header} />
           <div className="app">
             <Route exact path="/" component={Welcome} />
-            <Route path="/art" component={() => <Lib display={this.state.display} artList={this.state.artList} currentArt={this.state.currentArt} handleCreateArtCard={this.handleCreateArtCard} handleArtDelete={this.handleArtDelete} handleClick={this.handleClick} />} />
+            <Route path="/art" component={() => <Lib display={this.state.display} artList={this.state.artList} currentArt={this.state.currentArt} handleCreateArtCard={this.handleCreateArtCard} handleArtDelete={this.handleArtDelete} handleClick={this.handleClick} handleUpdateArtCard={this.handleUpdateArtCard} />} />
           </div>
         <Footer />
         </React.Fragment>
