@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import Directions from "./Directions"
 import Description from "./Description"
 import CreateForm from "./CreateForm"
+import UpdateForm from "./UpdateForm"
 import "../Components/Multi.css"
 
 class Multi extends Component {
@@ -24,7 +25,11 @@ class Multi extends Component {
             }
         }
 
-        return (<div className="Multi-card"><CreateForm handleCreateArtCard={this.props.handleCreateArtCard}/></div>)
+        return (
+          <div className="Multi-card">
+            <CreateForm handleCreateArtCard={this.props.handleCreateArtCard} />
+            <UpdateForm currentArt={this.props.currentArt} handleUpdateArtCard={this.props.handleUpdateArtCard} />
+          </div>)
     }
 }
 
