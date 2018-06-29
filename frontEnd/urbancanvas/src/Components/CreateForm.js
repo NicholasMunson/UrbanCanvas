@@ -10,18 +10,25 @@ class CreateForm extends Component {
 			lng: 1
 		}
 		this.addressUpdate = this.addressUpdate.bind(this)
-		this.shouldComponentUpdate = this.shouldComponentUpdate.bind(this)
+		this.handleChange = this.handleChange.bind(this)
+
 	}
 	addressUpdate(places) {
-		this.setState = {
+		console.log(places);
+		this.setState({
 			location: places.location,
 			lat: places.lat,
 			lng: places.lng
-		}
+		})
+		console.log(this.state);
 	}
-	shouldComponentUpdate(event) {
 
+	handleChange(event) {
+		this.setState({
+			[event.target.name]: event.target.value
+		})
 	}
+
 
 	render() {
 		return (
@@ -32,13 +39,13 @@ class CreateForm extends Component {
 					<div className='input-wrapper'>
 
 						<label htmlFor='location'>Location</label>
-						<input name='location' type='text' value={this.state.location} readOnly required></input>
+						<input name='location' type='text' value={this.state.location} onChange={this.state.handelChange} required></input>
 
 						<label htmlFor='lat'>Latitude</label>
-						<input name='lat' type='number' min='-90' max='90' defaultValue={this.state.lat} required></input>
+						<input name='lat' type='number' min='-90' max='90' value={this.state.lat} readOnly required></input>
 
 						<label htmlFor='lng'>Longitude</label>
-						<input name='lng' type='number' step='0.001' min='-90' max='90' defaultValue={this.state.lng} required></input>
+						<input name='lng' type='number' step='0.001' min='-90' max='90' value={this.state.lng} readOnly required></input>
 
 						<label htmlFor='imgUrl'>Image Url</label>
 						<input name='imgUrl' type='text' required></input>
