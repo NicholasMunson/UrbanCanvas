@@ -12,7 +12,7 @@ class App extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      display: "d",
+      display: "a",
       artList: [],
       currentArt: {}
     }
@@ -20,6 +20,7 @@ class App extends React.Component {
     this.handleCreateArtCard = this.handleCreateArtCard.bind(this)
     this.handleUpdateArtCard = this.handleUpdateArtCard.bind(this)
     this.handleArtDelete = this.handleArtDelete.bind(this)
+    this.updateDisplay = this.updateDisplay.bind(this)
   }
 
   componentDidMount = () => {
@@ -30,6 +31,12 @@ class App extends React.Component {
           artList: res
         })
       })
+  }
+
+  updateDisplay(display) {
+    this.setState({
+      display: display
+    })
   }
 
   handleClick(event, id) {
@@ -124,7 +131,7 @@ class App extends React.Component {
           <Route className="header" path="/" component={Header} />
           <div className="app">
             <Route exact path="/" component={Welcome} />
-            <Route path="/art" component={() => <Lib display={this.state.display} artList={this.state.artList} currentArt={this.state.currentArt} handleCreateArtCard={this.handleCreateArtCard} handleArtDelete={this.handleArtDelete} handleClick={this.handleClick} handleUpdateArtCard={this.handleUpdateArtCard} />} />
+            <Route path="/art" component={() => <Lib display={this.state.display} artList={this.state.artList} currentArt={this.state.currentArt} handleCreateArtCard={this.handleCreateArtCard} handleArtDelete={this.handleArtDelete} handleClick={this.handleClick} handleUpdateArtCard={this.handleUpdateArtCard} updateDisplay={this.updateDisplay}/>} />
           </div>
         <Footer />
         </React.Fragment>
