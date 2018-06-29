@@ -3,7 +3,7 @@
   "name": "Urban Canvas, your guide to Art outside the norm",
   "icons": [
     {
-      "src": "http://www.freepngimg.com/download/graffiti/31882-9-graffiti-picture.png",
+      "src": "spraycan.png",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     }
