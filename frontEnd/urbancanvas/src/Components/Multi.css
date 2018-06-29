@@ -13,5 +13,10 @@ flex-direction: row;
   width: 100%
 }
 .art-list{
-  
+  width: 100%;
+
+}
+.map-container-lib{
+  width: 67.4%;
+
 }
