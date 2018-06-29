@@ -18,5 +18,9 @@ flex-direction: row;
 }
 .map-container-lib{
   width: 67.4%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 5%;
 
 }
