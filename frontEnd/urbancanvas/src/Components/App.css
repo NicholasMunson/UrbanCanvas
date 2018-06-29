@@ -134,6 +134,13 @@
     height: auto;
 }
 
+
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
 footer {
     position: fixed;
     bottom: 0;
