@@ -6,8 +6,8 @@ require("dotenv").config()
 class Map extends Component {
   render() {
     const clicked = this.props.currentArt
-    const message = clicked ? clicked.description : "Denver Art Museum"
-    let mapLocation = clicked ? { lat: clicked.lat, lng: clicked.lng } : { lat: 39.7371342, lng: -104.9894632 }
+    const message = clicked.description ? clicked.description : "Denver Art Museum"
+    let mapLocation = clicked.lat && clicked.lng ? { lat: clicked.lat, lng: clicked.lng } : { lat: 39.7371342, lng: -104.9894632 }
 
     return (
       <div className="map-container">
