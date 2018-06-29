@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import Directions from "./Directions"
 import Description from "./Description"
 import CreateForm from "./CreateForm"
+import "../Components/Multi.css"
 
 class Multi extends Component {
     constructor(props) {
