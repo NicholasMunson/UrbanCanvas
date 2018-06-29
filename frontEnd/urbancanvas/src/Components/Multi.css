@@ -20,11 +20,11 @@ margin-bottom: 1.3%;
 }
 .map-container-lib{
   align-content: center;
-  width: 67.4%;
+  width: 50%;
   height: auto;
   display: flex;
   flex-direction: column;
-  position: fixed;
+  /* position: fixed; */
   left: 58%;
   /* align-items: center; */
 }
