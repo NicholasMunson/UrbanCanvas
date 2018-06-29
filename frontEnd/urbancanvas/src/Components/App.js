@@ -1,12 +1,10 @@
 import React from 'react'
-import {
-  BrowserRouter as Router,
-  Route
-} from 'react-router-dom'
+import {BrowserRouter as Router,Route} from 'react-router-dom'
 import Header from './Header'
 import Lib from './Lib';
 import Welcome from './Welcome'
 import "./App.css"
+import Footer from './Footer'
 
 const URL = "https://urban-canvas-server.herokuapp.com/api/v1/art-cards"
 
@@ -95,6 +93,7 @@ class App extends React.Component {
             <Route exact path="/" component={Welcome} />
             <Route path="/art" component={() => <Lib display={this.state.display} artList={this.state.artList} currentArt={this.state.currentArt} handleCreateArtCard={this.handleCreateArtCard} handleArtDelete={this.handleArtDelete} handleClick={this.handleClick} />} />
           </div>
+        <Footer />
         </React.Fragment>
       </Router>
     )

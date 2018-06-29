@@ -11,10 +11,10 @@ const Header = (props) => {
             </header>
             <div className="nav">
                 <button className="navbut1">
-                    <Link className="home" to="/">Home</Link>
+                    <Link className="home" to="/">HOME</Link>
                 </button>
                 <button className="navbut2">
-                    <Link className="art" to="/Art">Art</Link>
+                    <Link className="art" to="/Art">ART</Link>
                 </button>
             </div>
         </React.Fragment>

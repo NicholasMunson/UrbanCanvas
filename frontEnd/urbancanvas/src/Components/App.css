@@ -1,7 +1,5 @@
-
-
 .App-header {
-    background-image: url("../images/graffiti-wall-1.jpg"); 
+    background-image: linear-gradient(rgba(158, 17, 17, 0.2), rgba(158, 17, 17, 0.2)), url("../images/graffiti-wall-1.jpg");
     height: 150px;
     padding: 20px;
     color: black;
@@ -15,6 +13,21 @@
     font-size: 145px;
     text-shadow: 0 0 0.3em #aa0c0c, 0 0 0.3em #aa0c0c;
 }
+.App-title {
+  animation-duration: 3s;
+  animation-name: slidein;
+  }
+
+  @keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 300%;
+    }
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
 
 .nav {
     background-color: dimgray;
@@ -34,13 +47,15 @@
 .home {
     text-decoration: none;
     font-size: 15px;
-    color: black;
+    text-shadow: 0 0 0.1em #070101, 0 0 0.1em #070101;
+    color: red;
 }
 
 .art {
     text-decoration: none;
     font-size: 15px;
-    color: black;
+    text-shadow: 0 0 0.1em #070101, 0 0 0.1em #070101;
+    color: red;
 }
 
 .navbut2 {
@@ -64,6 +79,7 @@
     font-size: 24px;
     margin: 0 auto;
     color: white;
+    text-shadow: 0 0 0.1em #070101, 0 0 0.1em #070101;
     padding: 15%;
 }
 
@@ -75,6 +91,7 @@
     font-size: 20px;
     background-color: dimgray;
     color: white;
+    text-shadow: 0 0 0.1em #070101, 0 0 0.1em #070101;
     margin: 0 auto;
 }
 
@@ -118,4 +135,14 @@
     width: 100%;
     height: auto;
 
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 25px;
+  background-color: dimgray;
+  color: white;
 }
