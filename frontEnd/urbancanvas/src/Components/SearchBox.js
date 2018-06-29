@@ -44,11 +44,11 @@ const SearchBox = compose(
     >
       <input
         type="text"
-        placeholder="Enter the address of the street piece"
+        placeholder="Please enter the address of the street piece you wish to add."
         style={{
           boxSizing: `border-box`,
           border: `1px solid transparent`,
-          width: `240px`,
+          width: `100%`,
           height: `32px`,
           padding: `0 12px`,
           borderRadius: `3px`,
