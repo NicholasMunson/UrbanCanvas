@@ -11,7 +11,7 @@ const SearchBox = compose(
     containerElement: <div style={{ height: `400px` }} />,
   }),
   lifecycle({
-    componentWillMount() {
+    componentDidMount() {
       const refs = {}
 
       this.setState({
@@ -23,6 +23,14 @@ const SearchBox = compose(
           const places = refs.searchBox.getPlaces();
 
           this.setState({
+            // props.places.map(({ place_id, formatted_address, geometry: { location } }) =>
+            //   <li key={place_id}>
+            //     {formatted_address}
+            //     {" at "}
+            //     ({location.lat()}, {location.lng()})
+            //  </li>
+            // )
+
             places,
           });
         },
@@ -56,15 +64,7 @@ const SearchBox = compose(
 
 
     </StandaloneSearchBox>
-    <ol>
-      {props.places.map(({ place_id, formatted_address, geometry: { location } }) =>
-        <li key={place_id}>
-          {formatted_address}
-          {" at "}
-          ({location.lat()}, {location.lng()})
-        </li>
-      )}
-    </ol>
+
   </div>
 );
 

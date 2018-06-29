@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 import Atlas from "./Atlas"
-import SearchBox from "./SearchBox";
+
 require("dotenv").config()
 
 class Map extends Component {
@@ -11,8 +11,7 @@ class Map extends Component {
 
     return (
       <div className="map-container">
-        <h3>Maps</h3>
-        <SearchBox />
+        <h3>where to find dope art</h3>
         <Atlas
           markerMessage={message}
           locale={mapLocation}
