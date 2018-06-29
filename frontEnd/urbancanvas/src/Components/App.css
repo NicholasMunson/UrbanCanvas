@@ -134,7 +134,10 @@
     height: auto;
 }
 
-
+.directions {
+  width: 50%;
+  text-align: center;
+}
 
 .input-wrapper {
   display: flex;
