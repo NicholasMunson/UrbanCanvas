@@ -42,10 +42,10 @@ class CreateForm extends Component {
 						<input name='location' type='text' value={this.state.location} readOnly required></input>
 
 						<label htmlFor='lat'>Latitude</label>
-						<input name='lat' type='number' min='-90' max='90' value={this.state.lat} readOnly required></input>
+						<input name='lat' type='number' step='0.0001' min='-180' max='180' value={this.state.lat} readOnly required></input>
 
 						<label htmlFor='lng'>Longitude</label>
-						<input name='lng' type='number' step='0.001' min='-90' max='90' value={this.state.lng} readOnly required></input>
+						<input name='lng' type='number' step='0.0001' min='-180' max='180' value={this.state.lng} readOnly required></input>
 
 						<label htmlFor='imgUrl'>Image Url</label>
 						<input name='imgUrl' type='text' required></input>

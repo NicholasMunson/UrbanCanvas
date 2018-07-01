@@ -14,9 +14,9 @@ class UpdateForm extends React.Component {
             <label htmlFor='location'>Location</label>
             <input name='location' type='text' onChange={this.handleChange} defaultValue={this.props.currentArt.location} required></input>
             <label htmlFor='lat'>Latitude</label>
-            <input name='lat' type='number' min='-90' max='90' onChange={this.handleChange} defaultValue={this.props.currentArt.lat} required></input>
+            <input name='lat' type='number' step='0.0001' min='-180' max='180' onChange={this.handleChange} defaultValue={this.props.currentArt.lat} required></input>
             <label htmlFor='lng'>Longitude</label>
-            <input name='lng' type='number' step='0.001' min='-90' max='90' onChange={this.handleChange} defaultValue={this.props.currentArt.lng} required></input>
+            <input name='lng' type='number' step='0.0001' min='-180' max='180' onChange={this.handleChange} defaultValue={this.props.currentArt.lng} required></input>
             <input type='submit' value='Update'></input>
           </div>
         </form>
