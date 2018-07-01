@@ -33,6 +33,13 @@ class App extends React.Component {
       })
   }
 
+  handleErrors(response) {
+    if (!response.ok) {
+      throw new Error(response.statusText)
+    }
+    return response
+  }
+
   updateDisplay(display) {
     this.setState({
       display: display
@@ -62,14 +69,18 @@ class App extends React.Component {
       }),
       headers: { 'Content-Type': 'application/json' }
     })
-      .then(res => res.json())
-      .then(res => {
-        let currentArtList = this.state.artList
-        currentArtList.unshift(res)
-        this.setState({
-          artList: currentArtList
-        })
+    .then(this.handleErrors)
+    .then(res => res.json())
+    .then(res => {
+      let currentArtList = this.state.artList
+      currentArtList.unshift(res)
+      this.setState({
+        artList: currentArtList
       })
+    })
+    .catch(err => {
+      console.error(err)
+    })
   }
 
   handleArtDelete(event, id) {
@@ -83,14 +94,18 @@ class App extends React.Component {
       method: "DELETE",
       headers: { "Content-Type": "application/json" }
     })
-      .then(res => res.json())
-      .then(res => {
-        currentArtList.splice(currentArtList.indexOf(currentArt), 1)
-        this.setState({
-          artList: currentArtList,
-          currentArt: {}
-        })
+    .then(this.handleErrors)
+    .then(res => res.json())
+    .then(res => {
+      currentArtList.splice(currentArtList.indexOf(currentArt), 1)
+      this.setState({
+        artList: currentArtList,
+        currentArt: {}
       })
+    })
+    .catch(err => {
+      console.error(err)
+    })
   }
 
   handleUpdateArtCard(event, updateForm, id) {
@@ -110,6 +125,7 @@ class App extends React.Component {
       }),
       headers: {"Content-Type": "application/json"}
     })
+    .then(this.handleErrors)
     .then(res => res.json())
     .then(res => {
       let currentArtList = this.state.artList
@@ -120,6 +136,9 @@ class App extends React.Component {
         currentArt: res,
         artList: currentArtList
       })
+    })
+    .catch(err => {
+      console.error(err)
     })
   }
 
