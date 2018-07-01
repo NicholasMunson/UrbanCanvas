@@ -21,7 +21,6 @@ class App extends React.Component {
     this.handleUpdateArtCard = this.handleUpdateArtCard.bind(this)
     this.handleArtDelete = this.handleArtDelete.bind(this)
     this.updateDisplay = this.updateDisplay.bind(this)
-    this.addNewArt = this.addNewArt.bind(this)
   }
 
   componentDidMount = () => {
@@ -43,7 +42,6 @@ class App extends React.Component {
   handleClick(event, id) {
     let currentArt = this.state.artList.filter(art => art.id == id)[0]
     this.setState({
-      // display: 'a',
       currentArt: currentArt
     })
   }
@@ -95,12 +93,6 @@ class App extends React.Component {
       })
   }
 
-  addNewArt(event, c){
-    this.setState({
-      display: c
-    })
-  }
-
   handleUpdateArtCard(event, updateForm, id) {
     event.preventDefault()
 
@@ -121,8 +113,8 @@ class App extends React.Component {
     .then(res => res.json())
     .then(res => {
       let currentArtList = this.state.artList
-      let artToBeUpdated = currentArtList.filter(art => art.id == res.id)
-      currentArtList.splice(currentArtList.indexOf(res), 1)
+      let artToBeUpdated = currentArtList.filter(art => art.id == res.id)[0]
+      currentArtList.splice(currentArtList.indexOf(artToBeUpdated), 1)
       currentArtList.unshift(res)
       this.setState({
         currentArt: res,
