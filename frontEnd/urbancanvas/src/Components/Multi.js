@@ -26,6 +26,8 @@ class Multi extends Component {
 				return <UpdateForm
 					currentArt={this.props.currentArt}
 					handleUpdateArtCard={this.props.handleUpdateArtCard} />
+			default:
+				return <p>Loading Error</p>
 		}
 	}
 
