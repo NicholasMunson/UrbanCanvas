@@ -1,8 +1,7 @@
 .header {
-  position: fixed;
-  width: 100%;
+    position: fixed;
+    width: 100%;
 }
-
 
 .App-header {
     background-image: linear-gradient(rgba(158, 17, 17, 0.2), rgba(158, 17, 17, 0.2)), url("../images/graffiti-wall-1.jpg");
@@ -10,7 +9,6 @@
     padding: 20px;
     color: #281818;
 }
-
 
 .App-title {
     font-family: 'Sedgwick Ave Display', cursive;
@@ -50,13 +48,13 @@
 }
 
 .navbut {
-    
+
     flex-direction: row;
     justify-content: center;
     width: 10%;
     height: 2rem;
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
 }
 
 .button-style {
@@ -138,15 +136,15 @@
 }
 
 .directions {
-  width: 50%;
-  text-align: center;
+    width: 50%;
+    text-align: center;
 }
 
 .input-wrapper {
-  display: flex;
-  flex-direction: column;
-  height: auto;
-  width: 50%;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 50%;
 }
 
 footer {
@@ -159,14 +157,14 @@ footer {
     color: white;
 }
 
-.home-atag{
-    margin: 0%;
+.home-atag {
+    margin: 0;
     background-color: #ffff;
-    padding: .6vmax 3.2vmax;
+    padding: 0.6vmax 3.2vmax;
 }
 
-.art-atag{
+.art-atag {
     background-color: #ffff;
-    padding: .6vmax 3.6vmax;
-    
+    padding: 0.6vmax 3.6vmax;
+
 }
