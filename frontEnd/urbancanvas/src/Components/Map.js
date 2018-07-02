@@ -11,14 +11,13 @@ class Map extends Component {
 
     return (
       <div className="map-container">
-        <h3>Where to find this dope art.</h3>
         <Atlas
           markerMessage={message}
           locale={mapLocation}
           isMarkerShown
           googleMapURL={process.env.REACT_APP_MAP_KEY}
           loadingElement={<div style={{ height: `100%` }} />}
-          containerElement={<div style={{ height: `400px` }} />}
+          containerElement={<div style={{ height: `300px` }} />}
           mapElement={<div style={{ height: `100%` }} />}
         />
       </div>

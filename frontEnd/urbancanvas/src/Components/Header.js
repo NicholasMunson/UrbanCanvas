@@ -9,14 +9,18 @@ const Header = (props) => {
                     Urban Canvas
                 </h1>
             </header>
-            <div className="nav"> 
+            <div className="nav">
             <div className="button-container">
+              <Link className="button-style home-atag" to="/">
                 <button className="navbut">
-                    <Link className="button-style home-atag" to="/">HOME</Link>
+                  HOME
                 </button>
+              </Link>
+              <Link className="button-style art-atag" to="/Art">
                 <button className="navbut">
-                    <Link className="button-style art-atag" to="/Art">ART</Link>
+                  ART
                 </button>
+              </Link>
             </div>
             </div>
         </div>
