@@ -12,10 +12,10 @@ const Header = (props) => {
             <div className="nav"> 
             <div className="button-container">
                 <button className="navbut">
-                    <Link className="button-style" to="/">HOME</Link>
+                    <Link className="button-style home-atag" to="/">HOME</Link>
                 </button>
                 <button className="navbut">
-                    <Link className="button-style" to="/Art">ART</Link>
+                    <Link className="button-style art-atag" to="/Art">ART</Link>
                 </button>
             </div>
             </div>

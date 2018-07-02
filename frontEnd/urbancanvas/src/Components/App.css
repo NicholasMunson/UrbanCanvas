@@ -50,10 +50,13 @@
 }
 
 .navbut {
+    
     flex-direction: row;
     justify-content: center;
     width: 10%;
     height: 2rem;
+    margin: 0px;
+    padding: 0px;
 }
 
 .button-style {
@@ -154,4 +157,16 @@ footer {
     height: 25px;
     background-color: dimgray;
     color: white;
+}
+
+.home-atag{
+    margin: 0%;
+    background-color: #ffff;
+    padding: .6vmax 3.2vmax;
+}
+
+.art-atag{
+    background-color: #ffff;
+    padding: .6vmax 3.6vmax;
+    
 }
