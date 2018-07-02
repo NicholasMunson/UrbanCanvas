@@ -1,10 +1,9 @@
-import React, {Component} from 'react'
-import {Link} from 'react-router-dom'
+import React from 'react'
 
 const Footer = (props) => {
-  return ( 
+  return (
     <footer>
-    <small> &copy;2018 Urban Canvas.All Rights Reserved.</small> 
+      <small> &copy;2018 Urban Canvas.All Rights Reserved.</small>
     </footer>
   )
 }

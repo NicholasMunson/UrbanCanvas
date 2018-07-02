@@ -13,9 +13,7 @@ const SearchBox = compose(
   lifecycle({
     componentDidMount() {
       const refs = {}
-
       this.setState({
-        places: [],
         onSearchBoxMounted: ref => {
           refs.searchBox = ref;
         },
@@ -29,7 +27,6 @@ const SearchBox = compose(
             lat: theLat,
             lng: theLng
           })
-          places
         },
       })
     },
@@ -58,10 +55,7 @@ const SearchBox = compose(
           textOverflow: `ellipses`,
         }}
       />
-
-
     </StandaloneSearchBox>
-
   </div>
 );
 
