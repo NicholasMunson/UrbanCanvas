@@ -6,7 +6,7 @@ require("dotenv").config()
 
 const SearchBox = compose(
   withProps({
-    googleMapURL: process.env.REACT_APP_ADDRESS_SEARCH,
+    googleMapURL: process.env.REACT_APP_MAP_KEY,
     loadingElement: <div style={{ height: `100%` }} />,
     containerElement: <div style={{ height: `400px` }} />,
   }),
