@@ -25,8 +25,11 @@ This was a collaboration of Derek Hassick, Brevon Good, Nick Munson and Sandy Co
 To contact us you can reach out to the following:
 
 > Derek: dhassick@gmail.com
+
 > Brevon: brevonbgood@comcast.net
+
 > Nick: nicholas.t.munson@gmail.com
+
 > Sandy: sandy.cowper@gmail.com
 
 ---
