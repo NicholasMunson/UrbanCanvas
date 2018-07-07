@@ -62,24 +62,3 @@ class CreateForm extends Component {
 }
 
 export default CreateForm
-
-
-
-
-	// constructor(props) {
-	//   super(props)
-	//   this.state = {
-	//     imgUrl: null,
-	//     description: null,
-	//     location: null,
-	//     lat: null,
-	//     lng: null
-	//   }
-	//   this.handleChange = this.handleChange.bind(this)
-	// }
-	//
-	// handleChange(event) {
-	//   this.setState({
-	//     [event.target.name]: event.target.value
-	//   })
-	// }

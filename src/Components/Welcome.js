@@ -14,8 +14,7 @@ class Welcome extends Component {
                     </p>
 
                     <Link className="goto" to="/Art">
-                        < button className="enter">
-                            Begin Your Adventure!</button>
+                      <button className="enter">Begin Your Adventure!</button>
                     </Link>
 
                 </section>
